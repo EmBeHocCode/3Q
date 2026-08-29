@@ -1,0 +1,33 @@
+{
+  "note": "这里存放了登录服务器的相关配置，可以配置多个登录服务器供客户端候选",
+  "version": "1.0.1",
+  "serverList": [
+    {
+      "note": "taptap-service",
+      "scheme": "http",
+      "host": "160.191.50.225",
+      "port": 9000,
+      "enabled": true
+    },
+    {
+      "note": "公司内网ubuntu",
+      "scheme": "http",
+      "host": "160.191.50.225",
+      "port": 9000,
+      "enabled": false
+    },
+    {
+      "note": "我的台式机",
+      "scheme": "http",
+      "host": "160.191.50.225",
+      "port": 9000,
+      "enabled": false
+    }
+  ],
+  "path": {
+    "exist": "account/exist",
+    "login": "account/login",
+    "gsList": "game/srv/list",
+    "connectTarget": "game/srv/connect/target"
+  }
+}

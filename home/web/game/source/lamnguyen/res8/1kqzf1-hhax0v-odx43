@@ -1,0 +1,13 @@
+
+chunjie_jiantou.png
+size: 62,50
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jiantou_0010
+  rotate: false
+  xy: 2, 2
+  size: 58, 46
+  orig: 200, 200
+  offset: 69, 78
+  index: -1

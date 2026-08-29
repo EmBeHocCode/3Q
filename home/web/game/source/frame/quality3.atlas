@@ -1,0 +1,178 @@
+{
+    "frames": {
+        "zise_0000.png": {
+            "frame": {
+                "h": 101,
+                "idx": 0,
+                "w": 81,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 57,
+                "y": 46
+            }
+        },
+        "zise_0001.png": {
+            "frame": {
+                "h": 112,
+                "idx": 0,
+                "w": 102,
+                "x": 0,
+                "y": 102
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 47,
+                "y": 39
+            }
+        },
+        "zise_0002.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 116,
+                "x": 82,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 41,
+                "y": 72
+            }
+        },
+        "zise_0003.png": {
+            "frame": {
+                "h": 70,
+                "idx": 0,
+                "w": 128,
+                "x": 0,
+                "y": 215
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 34,
+                "y": 70
+            }
+        },
+        "zise_0004.png": {
+            "frame": {
+                "h": 80,
+                "idx": 0,
+                "w": 104,
+                "x": 103,
+                "y": 61
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 47,
+                "y": 68
+            }
+        },
+        "zise_0005.png": {
+            "frame": {
+                "h": 86,
+                "idx": 0,
+                "w": 118,
+                "x": 129,
+                "y": 142
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 41,
+                "y": 67
+            }
+        },
+        "zise_0006.png": {
+            "frame": {
+                "h": 85,
+                "idx": 0,
+                "w": 81,
+                "x": 208,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 64,
+                "y": 64
+            }
+        },
+        "zise_0007.png": {
+            "frame": {
+                "h": 97,
+                "idx": 0,
+                "w": 91,
+                "x": 129,
+                "y": 229
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 64,
+                "y": 59
+            }
+        },
+        "zise_0008.png": {
+            "frame": {
+                "h": 107,
+                "idx": 0,
+                "w": 99,
+                "x": 221,
+                "y": 229
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 63,
+                "y": 55
+            }
+        },
+        "zise_0009.png": {
+            "frame": {
+                "h": 93,
+                "idx": 0,
+                "w": 67,
+                "x": 248,
+                "y": 86
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 65,
+                "y": 51
+            }
+        }
+    },
+    "meta": {
+        "image": "quality3.png",
+        "prefix": "quality3/"
+    }
+}

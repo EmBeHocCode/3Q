@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "starting cross server 1"
+nohup java -Xms128m -Xmx2048m -jar tcg-cross.jar  --v=0 --cc=cross-yzx1 --p=20001 >/dev/null 2>&1 &
+echo $! | sudo tee /var/run/tcg-cross.pid

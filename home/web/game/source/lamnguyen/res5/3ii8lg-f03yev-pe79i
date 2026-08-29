@@ -1,0 +1,13 @@
+
+chunjie_kuang.png
+size: 174,132
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fangkuang_0010
+  rotate: false
+  xy: 2, 2
+  size: 170, 128
+  orig: 200, 200
+  offset: 15, 35
+  index: -1

@@ -1,0 +1,17 @@
+[Unit]
+Description=3Q single-server test stack
+After=network-online.target docker.service mariadb.service
+Wants=network-online.target
+Requires=docker.service mariadb.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStartPre=-/sbin/swapon /swapfile-3q
+ExecStart=/bin/bash /opt/3q-test/deploy/3q-test/start.sh
+ExecStop=/bin/bash /opt/3q-test/deploy/3q-test/stop.sh
+TimeoutStartSec=1200
+TimeoutStopSec=120
+
+[Install]
+WantedBy=multi-user.target

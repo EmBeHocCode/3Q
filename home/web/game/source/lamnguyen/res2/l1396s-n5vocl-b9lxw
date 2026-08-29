@@ -1,0 +1,76 @@
+{
+"skeleton": { "hash": "mFEVOKLWcP3i+od9BveLlHp5RrE", "spine": "3.6.53", "width": 200, "height": 200, "images": "./yuanzui/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone2", "parent": "root", "y": 18.7 }
+],
+"slots": [
+	{ "name": "yuantou_0010", "bone": "bone2", "attachment": "yuantou_0010" }
+],
+"skins": {
+	"default": {
+		"yuantou_0010": {
+			"yuantou_0010": { "y": -18.7, "width": 200, "height": 200 }
+		}
+	}
+},
+"animations": {
+	"1": {
+		"bones": {
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 36 }
+				]
+			}
+		}
+	},
+	"2": {
+		"bones": {
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 130.68 }
+				]
+			}
+		}
+	},
+	"3": {
+		"bones": {
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": -142.85 }
+				]
+			}
+		}
+	},
+	"4": {
+		"bones": {
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 0, "curve": "stepped" },
+					{ "time": 0.5, "angle": 0, "curve": "stepped" },
+					{ "time": 1, "angle": 0 }
+				],
+				"translate": [
+					{
+						"time": 0,
+						"x": 0,
+						"y": 12.69,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{
+						"time": 0.5,
+						"x": 0,
+						"y": 28.72,
+						"curve": [ 0.25, 0, 0.75, 1 ]
+					},
+					{ "time": 1, "x": 0, "y": 12.69 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1, "curve": "stepped" },
+					{ "time": 1, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

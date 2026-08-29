@@ -1,0 +1,132 @@
+{
+"skeleton": { "hash": "1sIbwWA03QJb90l2C4Z4DeDAgB4", "spine": "3.6.53", "width": 200, "height": 200, "images": "./jiantou/" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone2", "parent": "root" },
+	{ "name": "bone", "parent": "bone2" }
+],
+"slots": [
+	{ "name": "jiantou_0010", "bone": "bone", "attachment": "jiantou_0010" }
+],
+"skins": {
+	"default": {
+		"jiantou_0010": {
+			"jiantou_0010": { "width": 200, "height": 200 }
+		}
+	}
+},
+"animations": {
+	"1": {
+		"slots": {
+			"jiantou_0010": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 15.02, "y": 0 },
+					{ "time": 1, "x": -11.39, "y": 0 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 11.38 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 36 }
+				]
+			}
+		}
+	},
+	"2": {
+		"slots": {
+			"jiantou_0010": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 15.2, "y": 3.97 },
+					{ "time": 1, "x": -11.39, "y": 0 }
+				],
+				"shear": [
+					{ "time": 0, "x": 13.82, "y": 0 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": 130.68 }
+				]
+			}
+		}
+	},
+	"3": {
+		"slots": {
+			"jiantou_0010": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 15.02, "y": 0 },
+					{ "time": 1, "x": -11.39, "y": 0 }
+				],
+				"shear": [
+					{ "time": 0, "x": 0, "y": 11.38 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": -142.85 }
+				]
+			}
+		}
+	},
+	"4": {
+		"slots": {
+			"jiantou_0010": {
+				"color": [
+					{ "time": 0, "color": "ffffff00" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "ffffffff" },
+					{ "time": 1, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"bone": {
+				"translate": [
+					{ "time": 0, "x": 15.02, "y": 0 },
+					{ "time": 1, "x": -12.2, "y": -5.86 }
+				],
+				"shear": [
+					{ "time": 0, "x": 18.46, "y": 0 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "time": 0, "angle": -47.44 }
+				]
+			}
+		}
+	}
+}
+}

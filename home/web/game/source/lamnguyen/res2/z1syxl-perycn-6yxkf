@@ -1,0 +1,125 @@
+
+niao2.png
+size: 306,88
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+niao0000
+  rotate: false
+  xy: 235, 58
+  size: 28, 28
+  orig: 300, 300
+  offset: 134, 130
+  index: -1
+niao0001
+  rotate: false
+  xy: 276, 2
+  size: 27, 26
+  orig: 300, 300
+  offset: 134, 132
+  index: -1
+niao0002
+  rotate: false
+  xy: 276, 30
+  size: 28, 26
+  orig: 300, 300
+  offset: 134, 131
+  index: -1
+niao0003
+  rotate: false
+  xy: 203, 57
+  size: 30, 29
+  orig: 300, 300
+  offset: 134, 128
+  index: -1
+niao0004
+  rotate: false
+  xy: 168, 53
+  size: 33, 33
+  orig: 300, 300
+  offset: 133, 124
+  index: -1
+niao0005
+  rotate: false
+  xy: 134, 2
+  size: 36, 38
+  orig: 300, 300
+  offset: 132, 121
+  index: -1
+niao0006
+  rotate: false
+  xy: 46, 46
+  size: 41, 40
+  orig: 300, 300
+  offset: 131, 123
+  index: -1
+niao0007
+  rotate: false
+  xy: 2, 5
+  size: 43, 39
+  orig: 300, 300
+  offset: 131, 129
+  index: -1
+niao0008
+  rotate: false
+  xy: 89, 4
+  size: 43, 36
+  orig: 300, 300
+  offset: 131, 137
+  index: -1
+niao0009
+  rotate: false
+  xy: 47, 3
+  size: 40, 41
+  orig: 300, 300
+  offset: 132, 137
+  index: -1
+niao0010
+  rotate: false
+  xy: 129, 42
+  size: 37, 44
+  orig: 300, 300
+  offset: 132, 136
+  index: -1
+niao0011
+  rotate: false
+  xy: 172, 5
+  size: 34, 46
+  orig: 300, 300
+  offset: 132, 136
+  index: -1
+niao0012
+  rotate: false
+  xy: 208, 10
+  size: 33, 45
+  orig: 300, 300
+  offset: 131, 136
+  index: -1
+niao0013
+  rotate: false
+  xy: 89, 42
+  size: 38, 44
+  orig: 300, 300
+  offset: 131, 134
+  index: -1
+niao0014
+  rotate: false
+  xy: 2, 46
+  size: 42, 40
+  orig: 300, 300
+  offset: 132, 123
+  index: -1
+niao0015
+  rotate: false
+  xy: 243, 21
+  size: 31, 35
+  orig: 300, 300
+  offset: 133, 122
+  index: -1
+niao0016
+  rotate: false
+  xy: 265, 58
+  size: 28, 28
+  orig: 300, 300
+  offset: 134, 130
+  index: -1

@@ -1,0 +1,98 @@
+FROM centos:7.9.2009
+
+RUN sed -i 's|mirrorlist=|#mirrorlist=|g; s|#baseurl=http://mirror.centos.org/centos/$releasever|baseurl=http://vault.centos.org/7.9.2009|g' /etc/yum.repos.d/CentOS-*.repo \
+    && yum clean all \
+    && yum makecache fast
+
+RUN printf '%s\n' \
+    '[mongodb-org-3.6]' \
+    'name=MongoDB Repository' \
+    'baseurl=https://repo.mongodb.org/yum/redhat/7/mongodb-org/3.6/x86_64/' \
+    'gpgcheck=0' \
+    'enabled=1' \
+    > /etc/yum.repos.d/mongodb-org-3.6.repo
+
+RUN yum install -y \
+        bzip2-devel \
+        cyrus-sasl-devel \
+        gcc \
+        gcc-c++ \
+        graphviz \
+        libcurl-devel \
+        libffi-devel \
+        libstdc++.i686 \
+        libxml2-devel \
+        libxslt-devel \
+        lsof \
+        lz4-devel \
+        make \
+        mongodb-org-server-3.6.23 \
+        mongodb-org-shell-3.6.23 \
+        mongodb-org-tools-3.6.23 \
+        nmap-ncat \
+        net-tools \
+        nginx \
+        openssl-devel \
+        php \
+        php-cli \
+        php-fpm \
+        php-mbstring \
+        php-mysql \
+        php-xml \
+        procps-ng \
+        python-devel \
+        snappy-devel \
+        swig \
+        tar \
+        unzip \
+        wget \
+        which \
+        zlib-devel \
+    && yum clean all
+
+RUN printf '%s\n' \
+        '[epel-archive]' \
+        'name=EPEL Archive 7' \
+        'baseurl=https://archives.fedoraproject.org/pub/archive/epel/7/x86_64/' \
+        'enabled=1' \
+        'gpgcheck=0' \
+        > /etc/yum.repos.d/epel-archive.repo \
+    && yum --disablerepo='*' --enablerepo=epel-archive install -y luajit \
+    && yum clean all
+
+RUN curl -fsSL https://bootstrap.pypa.io/pip/2.7/get-pip.py -o /tmp/get-pip.py \
+    && python /tmp/get-pip.py 'pip<21' 'setuptools<45' 'wheel<1' \
+    && rm -f /tmp/get-pip.py
+
+RUN python -m pip install --no-cache-dir \
+        'cython<3' \
+        six \
+        lz4==0.8.2 \
+        numpy==1.16.0 \
+        xlrd \
+        rpdb \
+        psutil \
+        fabric==1.7.3 \
+        pycurl \
+        pycrypto \
+        M2Crypto==0.36.0 \
+        objgraph \
+        msgpack-python \
+        msgpack-rpc-python \
+        backports.ssl-match-hostname \
+        Markdown \
+        toro \
+        pymongo==3.12.3 \
+        pyrasite \
+        pyopenssl \
+        ThinkingDataSdk==1.4.0 \
+        tornado==4.4.2 \
+        Supervisor==3.3.0 \
+        redis \
+        twisted \
+        pynsq \
+        python-snappy==0.5.4
+
+WORKDIR /mnt/pokemon/deploy_dev
+
+CMD ["bash", "-lc", "sleep infinity"]

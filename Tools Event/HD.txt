@@ -1,0 +1,171 @@
+1.
+Cài aaapanel
+URL=https://www.aapanel.com/script/install_6.0_en.sh && if [ -f /usr/bin/curl ];then curl -ksSO "$URL" ;else wget --no-check-certificate -O install_6.0_en.sh "$URL";fi;bash install_6.0_en.sh aapanel
+- Sau khi cài xong sẽ có link aapanel. Rồi vào cài các phần mềm dưới
+
+Centos 7
+Nginx 1.20
+Mysql 5.7
+php 5.6
+
+----------------------------------------------------------------------------------
+2. Tải file
+up server.zip
+cd / 
+unzip server.zip
+chmod -R 777 /h5/
+chmod -R 755 /usr
+chmod -R 777 /home/
+
+tìm etc/profile
+thêm dòng
+
+export JAVA_HOME=/usr/local/jdk
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+export PATH=$PATH:/usr/local/erlang/bin
+export PATH=$PATH:/usr/local/rabbitmq/sbin
+export PATH=$PATH:/usr/local/mongodb/bin
+----------------------------------------------------------------------------------
+3. Lệnh cài đặt
+
+source /etc/profile
+
+yum -y install gcc glibc-devel make ncurses-devel openssl-devel xmlto perl wget gtk2-devel binutils-devel
+
+cd /usr/local
+tar zxf otp_src_24.2.tar.gz 
+mkdir -p /usr/local/erlang
+cd otp_src_24.2
+./configure --prefix=/usr/local/erlang
+make && make install
+
+cd /usr/local
+tar xf rabbitmq-server-generic-unix-3.9.14.tar.xz
+mv rabbitmq_server-3.9.14 rabbitmq
+source /etc/profile
+
+rabbitmq-plugins enable rabbitmq_management
+rabbitmq-server -detached
+rabbitmqctl add_user admin Abc123456...a
+rabbitmqctl set_user_tags admin administrator
+rabbitmqctl list_users
+rabbitmqctl change_password admin Abc123456...a
+rabbitmqctl add_user admin Abc123456...a
+rabbitmqctl change_password admin Abc123456...a
+rabbitmqctl set_user_tags admin administrator
+
+ 
+http://ip:15672
+
+tài khoản：admin
+mật khẩu：Abc123456...a
+
+Click admin xóa guest
+Ấn vào admin：
+ Set topic permission và Set permission
+ 
+----------------------------------------------------------------------------------
+cài mongo
+
+cd /usr/local/
+tar zxf mongodb-linux-x86_64-rhel70-5.0.6.tgz
+mv mongodb-linux-x86_64-rhel70-5.0.6 mongodb
+mkdir -p /usr/local/mongodb/data/
+mkdir -p /usr/local/mongodb/logs/
+
+
+bật mongo
+
+mongod -f /usr/local/mongodb/mongodb.conf
+netstat -nltp
+
+----------------------------------------------------------------------------------
+
+mongo
+use admin
+db.createUser({user:"abc123",pwd:"Abc123321123",roles:["root"]})
+exit
+
+----------------------------------------------------------------------------------
+Cài Cronn
+crontab -e
+Xong copy 5 dòng này
+Chọn i để sửa
+10 0 * * *  /www/server/cron/3ab48c27ec99cb9787749c362afae517 >> /www/server/cron/3ab48c27ec99cb9787749c362afae517.log 2>&1
+*/1 * * * * cd  /home/web/api/service/shopAction && php send_item.php >> /www/server/cron/shop_send_item.log
+*/1 * * * * cd  /home/web/api/service/eventAction && php send_gift.php >> /www/server/cron/event_send_gift.log
+*/1 * * * * cd  /home/web/api/service/missionAction && php send_gift.php >> /www/server/cron/mission_send_gift.log
+*/1 * * * * cd  /home/web/api/service/wheelAction && php send_gift.php >> /www/server/cron/send_gift.log
+
+ => Sau Esc => :wq xong enter để lưu và thoát
+
+----------------------------------------------------------------------------------
+
+Vào aaapanel -> Database -> đổi pass: EHrWXkpA30e6f7CQx2cx
+
+Đổi IP: 160.191.50.225 => Sang IP của bạn ở file tcg
+cloud_device
+cloud_mongo
+cloud_mq
+cloud_mysql
+srv_cross
+srv_group_device
+srv_game
+srv_login
+
+add sql dùng navicat WEB, tcg, stat 
+
+
+
+----------------------------------------------------------------------------------
+Sửa Game: Sửa domain => domain mới, ip => ip mới
+
+/home/web/game/source/index.js: 
+/h5/server/console/store/global.conf.json
+/home/web/game/source/js/bundle.js
+/home/web/game/source/admin/static/js/main.da770e7e.chunk.js
+/home/web/game/source/srv/yzx.out.js
+
+----------------------------------------------------------------------------------
+ 
+source /etc/profile
+----------------------------------------------------------------------------------
+Sửa Game: Web
+Trỏ domain vào folder chứa game: /home/web/
+Thêm đoạn mã này vào config của trang web
+```
+location /client/ {
+    try_files $uri $uri/client /client/index.php;
+}
+
+/home/web/api : Sửa domain 
+/home/web/api/includes/utils.php : Sửa domain
+/game/source/libs/v4r510n-p4ck0o0.js => Sửa thành domain của bạn
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cài xong up config_server 
+toàn bộ excel vào thư mục
+/h5/server/excel/release
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Bật sv
+sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+
+Lệnh mở sv
+cd /h5/server && ./start.sh
+Mở s2
+cd /h5/server/game && ./start2
+Đóng sv
+cd /h5/server && ./stop.sh
+
+Kiểm tra cổng port
+
+netstat -nltp
+
+-----------------------------------------------------------------------------------
+
+Trang admin game:
+http://domain/game/source/admin
+帐号：admin
+密码：admin

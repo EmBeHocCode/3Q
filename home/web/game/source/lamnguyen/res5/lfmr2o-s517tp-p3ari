@@ -1,0 +1,13 @@
+
+lvshuye.png
+size: 43,52
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+huangseshuye_0000
+  rotate: false
+  xy: 2, 2
+  size: 39, 48
+  orig: 100, 100
+  offset: 28, 31
+  index: -1

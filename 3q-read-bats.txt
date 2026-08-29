@@ -1,0 +1,42 @@
+﻿=== D:\3QVuongGia\data\usercenter_HD\start.bat ===
+exists=True
+@echo off
+color 1f
+title UC
+D:\3QVuongGia\Java\jdk1.8.0_121\bin\java -Xmx1024m -Xms512m -Xss256k -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./oom.hprof -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:GCPauseIntervalMillis=200 -XX:SurvivorRatio=6 -Xloggc:logs/gc.log -classpath "./;./lib/*;./config" com.playmore.http.jetty.SpringContextLoader
+pause
+
+=== D:\3QVuongGia\data\cross_android\start.bat ===
+exists=True
+@echo off
+color 1f
+title Cross
+D:\3QVuongGia\Java\jdk1.8.0_121\bin\java -Xms1048m -Xmn512m -Xss256k -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./oom.hprof -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:GCPauseIntervalMillis=200 -XX:SurvivorRatio=6 -Xloggc:logs/gc.log -classpath "./;../Jar/lib/*;./config;../Jar/framework/*;./app/gameserver/*" com.playmore.net.netty.context.SpringContextLoader
+pause
+
+=== D:\3QVuongGia\data\server_4001\start.bat ===
+exists=True
+@echo off
+color 1f
+title= S1
+D:\3QVuongGia\Java\jdk1.8.0_121\bin\java -Xms1048m -Xmn512m -Xss256k -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./oom.hprof -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:GCPauseIntervalMillis=200 -XX:SurvivorRatio=6 -Xloggc:logs/gc.log -classpath "./;../Jar/lib/*;./config;../Jar/framework/*;./app/gameserver/*" com.playmore.net.netty.context.SpringContextLoader
+pause
+
+=== D:\3QVuongGia\1 - GM.bat ===
+exists=True
+@echo off
+set JAVA_HOME=%cd%\Java\jdk1.8.0_121
+set JRE_HOME=%cd%\Java\jdk1.8.0_121
+set GAME_HOME=%cd%\tomcat\webapps\
+set path=%JAVA_HOME%\bin;%path%;%JAVA_HOME%%\Java\jdk1.8.0_121\bin
+set TX_CONF_PATH=%cd%\tomcat\webapps\wolf
+
+cd ./apache-tomcat-7.0.90/bin
+start startup.bat
+
+=== D:\3QVuongGia\99.Web.lnk ===
+exists=True
+shortcut file
+=== D:\3QVuongGia\0 - phpStudy.lnk ===
+exists=True
+shortcut file

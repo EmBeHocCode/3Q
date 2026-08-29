@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đang vào game...</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #060812;
+      color: #eaf2ff;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .jump-loading {
+      padding: 16px 20px;
+      border: 1px solid rgba(28, 176, 246, 0.32);
+      border-radius: 14px;
+      background: rgba(13, 17, 32, 0.88);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="jump-loading" id="jumpStatus">Đang xác thực tài khoản...</div>
+  <script>
+    function getCookie (cookieName) {
+      let name = cookieName + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+        
+      }
+      return "";
+    }
+    
+    function setStatus (text) {
+      var status = document.getElementById('jumpStatus');
+      if (status) status.textContent = text;
+    }
+
+    function checkUserAPI () {
+      var token = getCookie('token');
+      if (!token) {
+        setStatus('Chưa đăng nhập hoặc phiên đăng nhập đã hết hạn.');
+        alert('Chưa đăng nhập hoặc phiên đăng nhập đã hết hạn.');
+        return;
+      }
+
+      fetch('/api/index.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        body: new URLSearchParams({
+          action: 'getUser',
+          token: token
+        }).toString(),
+        credentials: 'same-origin'
+      })
+      .then(function(response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.text();
+      })
+      .then(function(responseText) {
+        var res = JSON.parse(responseText);
+        if (res.code != 200) {
+          setStatus(res.msg || 'Không xác thực được tài khoản.');
+          alert(res.msg || 'Không xác thực được tài khoản.');
+          return;
+        }
+
+        var dataJSON = res.data || {};
+        var user = dataJSON.account;
+        if (!user) {
+          setStatus('Không tìm thấy tài khoản game.');
+          alert('Không tìm thấy tài khoản game.');
+          return;
+        }
+
+        setStatus('Đang vào game...');
+        window.location.replace('/game/source/index.html?uid=' + encodeURIComponent(user) + '&v=2026081112');
+      })
+      .catch(function(error) {
+        console.error(error);
+        setStatus('Lỗi kết nối API, vui lòng thử lại.');
+        alert('Lỗi kết nối API, vui lòng thử lại.');
+      });
+    }
+    
+    checkUserAPI();
+  </script>
+</body>
+</html>

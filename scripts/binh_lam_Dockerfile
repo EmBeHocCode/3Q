@@ -1,0 +1,78 @@
+FROM ubuntu:18.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        ca-certificates \
+        curl \
+        g++-multilib \
+        gcc-multilib \
+        graphviz \
+        lib32stdc++6 \
+        libcairo2-dev \
+        libcurl4-openssl-dev \
+        libffi-dev \
+        liblz4-dev \
+        libsasl2-2 \
+        libsasl2-dev \
+        libsasl2-modules \
+        libsnappy-dev \
+        libssl-dev \
+        libxml2-dev \
+        libxslt1-dev \
+        lsof \
+        luajit \
+        nginx \
+        php-fpm \
+        php-cli \
+        php-curl \
+        php-mbstring \
+        php-mysql \
+        php-xml \
+        pkg-config \
+        procps \
+        python2.7 \
+        python-dev \
+        python-pip \
+        python-setuptools \
+        redis-server \
+        supervisor \
+        swig \
+        unzip \
+        wget \
+    && ln -sf /usr/bin/python2.7 /usr/bin/python \
+    && python -m pip install --no-cache-dir --upgrade "pip<21" "setuptools<45" "wheel<1"
+
+RUN python -m pip install --no-cache-dir \
+        "cython<3" \
+        six \
+        lz4==0.8.2 \
+        numpy==1.16.0 \
+        xlrd \
+        xdot \
+        rpdb \
+        psutil \
+        fabric==1.7.3 \
+        pycurl \
+        pycrypto \
+        M2Crypto==0.36.0 \
+        objgraph \
+        msgpack-python \
+        backports.ssl-match-hostname \
+        Markdown \
+        toro \
+        pymongo==3.12.3 \
+        pyrasite \
+        pyopenssl \
+        ThinkingDataSdk==1.4.0 \
+        tornado==4.4.2 \
+        Supervisor==3.3.0 \
+        redis \
+        twisted \
+        python-snappy==0.5.4
+
+WORKDIR /mnt/pokemon/deploy_dev
+
+CMD ["bash", "-lc", "sleep infinity"]

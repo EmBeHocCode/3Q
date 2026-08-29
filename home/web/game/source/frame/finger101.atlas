@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "00.png": {
+            "frame": {
+                "h": 192,
+                "idx": 0,
+                "w": 192,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 192,
+                "w": 192
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "01.png": {
+            "frame": {
+                "h": 192,
+                "idx": 0,
+                "w": 192,
+                "x": 193,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 192,
+                "w": 192
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "finger101.png",
+        "prefix": "finger101/"
+    }
+}

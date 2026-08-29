@@ -1,0 +1,178 @@
+{
+    "frames": {
+        "hongse0000.png": {
+            "frame": {
+                "h": 136,
+                "idx": 0,
+                "w": 139,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 30,
+                "y": 33
+            }
+        },
+        "hongse0001.png": {
+            "frame": {
+                "h": 139,
+                "idx": 0,
+                "w": 141,
+                "x": 0,
+                "y": 137
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 29,
+                "y": 31
+            }
+        },
+        "hongse0002.png": {
+            "frame": {
+                "h": 140,
+                "idx": 0,
+                "w": 143,
+                "x": 0,
+                "y": 277
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 28,
+                "y": 31
+            }
+        },
+        "hongse0003.png": {
+            "frame": {
+                "h": 141,
+                "idx": 0,
+                "w": 143,
+                "x": 142,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 28,
+                "y": 30
+            }
+        },
+        "hongse0004.png": {
+            "frame": {
+                "h": 142,
+                "idx": 0,
+                "w": 143,
+                "x": 286,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 28,
+                "y": 30
+            }
+        },
+        "hongse0005.png": {
+            "frame": {
+                "h": 142,
+                "idx": 0,
+                "w": 144,
+                "x": 430,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 27,
+                "y": 30
+            }
+        },
+        "hongse0006.png": {
+            "frame": {
+                "h": 142,
+                "idx": 0,
+                "w": 145,
+                "x": 144,
+                "y": 143
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 27,
+                "y": 30
+            }
+        },
+        "hongse0007.png": {
+            "frame": {
+                "h": 142,
+                "idx": 0,
+                "w": 145,
+                "x": 144,
+                "y": 286
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 27,
+                "y": 30
+            }
+        },
+        "hongse0008.png": {
+            "frame": {
+                "h": 141,
+                "idx": 0,
+                "w": 142,
+                "x": 290,
+                "y": 143
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 28,
+                "y": 30
+            }
+        },
+        "hongse0009.png": {
+            "frame": {
+                "h": 136,
+                "idx": 0,
+                "w": 137,
+                "x": 433,
+                "y": 143
+            },
+            "sourceSize": {
+                "h": 200,
+                "w": 200
+            },
+            "spriteSourceSize": {
+                "x": 31,
+                "y": 33
+            }
+        }
+    },
+    "meta": {
+        "image": "quality5.png",
+        "prefix": "ui转新/quality5/"
+    }
+}
